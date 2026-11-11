@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Cache analisis (dibuat ulang otomatis dari Result/)
+Analisis_Gvalue/cache/
+
+# File sementara sistem / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.swp
+.vscode/
+.idea/

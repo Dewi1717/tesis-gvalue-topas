@@ -1,0 +1,16 @@
+# Normalisasi akhir baris
+* text=auto
+
+# Skrip shell harus LF agar bisa dijalankan di Linux/WSL
+*.sh text eol=lf
+
+# Output TOPAS: besar & hasil simulasi -> jangan tampilkan diff, tandai sebagai generated
+*.phsp -diff linguist-generated
+*.header linguist-generated
+TopasParameterDump_*.html -diff linguist-generated
+*.bin binary
+
+# Output analisis
+*.png binary
+*.npz binary
+Analisis_Gvalue/output/** linguist-generated

@@ -1,0 +1,87 @@
+#############################
+###### TOPAS Parameters #####
+#############################
+
+i:Ts/Verbosity = 1
+i:Ts/ShowHistoryCountAtInterval = 260
+i:Ts/NumberOfThreads = 1
+i:Ts/Seed = 84
+b:Ts/DumpParameters = "True"
+
+#############################
+#### Physics & Chemistry ####
+#############################
+
+sv:Ph/Default/Modules = 2 "TsEmDNAPhysics" "TsEmDNAChemistry"
+s:Ph/Default/Electron/SetElasticScatteringModel = "CPA100"
+
+s:Ch/ChemistryName = "TOPASChemistry"
+includeFile = TOPASDNAReactions.txt
+
+b:Ch/TOPASChemistry/ChemicalStageTransportActive = "True"
+
+d:Ch/TOPASChemistry/ChemicalStageTimeEnd = 1.00001 ps
+dv:Ch/TOPASChemistry/ChemicalStageTimeStepsHighEdges = 1 99999 ps
+dv:Ch/TOPASChemistry/ChemicalStageTimeStepsResolutions = 1 0.5 ps
+
+#############################
+######### Geometry ##########
+#############################
+
+d:Ge/World/HLX = 1.0 um
+d:Ge/World/HLY = 1.0 um
+d:Ge/World/HLZ = 1.0 um
+s:Ge/World/Material = "G4_WATER"
+
+s:Ge/target/Parent   = "World"
+s:Ge/target/Material = "G4_WATER"
+s:Ge/target/Type     = "TsSphere"
+d:Ge/target/RMax     = 1.0 um
+
+#############################
+########## Source ###########
+#############################
+
+s:So/Demo/Type                   = "Volumetric"
+s:So/Demo/ActiveMaterial         = "G4_WATER"
+s:So/Demo/Component              = "target"
+s:So/Demo/BeamParticle           = "proton"
+d:So/Demo/BeamEnergy             = 100 MeV
+i:So/Demo/NumberOfHistoriesInRun = 100000000
+
+#######################
+######## Scorer #######
+#######################
+
+s:Sc/gvalue/Quantity   = "TsIRTInterPulse"
+s:Sc/gvalue/Component  = "target"
+s:Sc/gvalue/OutputFile = "lebarpulsa_10ps_seed84"
+s:Sc/gvalue/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/gvalue/OutputType = "ascii"
+
+# observasi waktu
+# interval pulsa = 10 ms
+# total durasi 10 pulsa ≈ 90 ms
+i:Sc/gvalue/TimeBins  = 1000
+d:Sc/gvalue/TimeLower = 1.0 ps
+d:Sc/gvalue/TimeUpper = 1.2e5 us
+
+# parameter iradiasi
+d:Sc/gvalue/PrescribedDose = 10 Gy
+s:Sc/gvalue/PulseDistribution = "Uniform"
+
+i:Sc/gvalue/NumberOfPulses = 10
+d:Sc/gvalue/PulsesFrequency = 100 /s
+
+# profil pulsa: lebar pulsa 10 ps
+# untuk distribusi uniform, pusat pulsa diletakkan di 5 ps
+d:Sc/gvalue/PulseTimeMean = 5 ps
+d:Sc/gvalue/PulseTimeFWHM = 10 ps
+
+# molekul yang dicatat
+sv:Sc/gvalue/ReportMoleculesNamed = 10 "OH^0" "e_aq^-1" "H3O^1" "H2O2^0" "H^0" "H_2^0" "OH^-1" "O2^-1" "HO2^0" "O2^0"
+
+s:Sc/gvalue/SensitiveVolumeName = "target"
+
+b:Sc/gvalue/ForceLowTimeCutTo1ps = "True"
+b:Sc/gvalue/EnableHighTimeScavengers = "True"
