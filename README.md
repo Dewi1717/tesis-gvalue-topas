@@ -15,6 +15,9 @@ Tesis/
 │   └── jumlahpulsa/    # variasi jumlah pulsa (Flash vs konvensional)
 ├── Result/             # output TOPAS: <nama>_seedN.phsp + .header (100 seed per kondisi)
 ├── Analisis_Gvalue/    # kode Python analisis G-value + output grafik & tabel
+├── third_party_licenses/  # teks lisensi pihak ketiga (TOPAS-nBio)
+├── LICENSE             # MIT (karya asli repositori ini)
+├── NOTICE              # pengakuan & cakupan lisensi pihak ketiga
 ├── requirements.txt
 └── README.md
 ```
@@ -97,5 +100,35 @@ Dewi Riskiana – Tesis, [Program Studi], [Universitas], [Tahun].
 
 ## Lisensi
 
-<!-- Pilih lisensi lalu tambahkan file LICENSE (mis. MIT untuk kode, CC BY 4.0 untuk data). -->
-Belum ditentukan.
+- **Karya asli repositori ini** (kode analisis di `Analisis_Gvalue/`, file input simulasi,
+  skrip run, dan dokumentasi) dirilis dengan lisensi **MIT**. Lihat [LICENSE](LICENSE).
+- **File turunan TOPAS-nBio** (`TOPASChemistry.txt`, `TOPASDNAReactions.txt`,
+  `TOPASDefaultReactions.txt` di `Parameter/`) tetap berada di bawah
+  **TOPAS-nBio Software License Version 1.0**. Lihat
+  [third_party_licenses/TOPAS-nBio-LICENSE.txt](third_party_licenses/TOPAS-nBio-LICENSE.txt)
+  dan [NOTICE](NOTICE).
+
+This product includes software developed by Members of the TOPAS-nBio Collaboration
+( https://topas-nbio.readthedocs.io/en/latest/getting-started/Members.html ).
+
+TOPAS-nBio sendiri tidak didistribusikan di repositori ini. Untuk mendapatkannya, kunjungi
+https://github.com/topas-nbio/TOPAS-nBio dan dokumentasinya di
+https://nbio.readthedocs.io/en/latest/getting-started/Introduction.html.
+Nama "TOPAS" dan "TOPAS-nBio" dipakai hanya untuk menyebut perangkat lunak yang digunakan,
+bukan sebagai dukungan dari TOPAS-nBio Collaboration.
+
+> **Tidak untuk penggunaan klinis.** Sesuai lisensi TOPAS-nBio, perangkat lunak dan hasil
+> simulasi di repositori ini hanya untuk keperluan penelitian.
+
+## Sitasi
+
+Jika memakai repositori ini, mohon sitasi tesis ini dan referensi TOPAS-nBio berikut.
+TOPAS-nBio meminta referensi utama mereka disitasi untuk semua karya yang memakai TOPAS-nBio.
+
+- **TOPAS-nBio (wajib):** Schuemann J. et al. TOPAS-nBio: An Extension to the TOPAS
+  Simulation Toolkit for Cellular and Sub-cellular Radiobiology. *Radiation Research*
+  191(2), 125 (2019). https://doi.org/10.1667/RR15226.1
+- **TOPAS:** Perl J. et al. *Medical Physics* 39(11) (2012). https://doi.org/10.1118/1.4758060
+- **Kimia radiolisis di TOPAS-nBio:** Ramos-Méndez J. et al. *Physics in Medicine & Biology*
+  63(10) (2018). https://doi.org/10.1088/1361-6560/aac04c
+- Daftar lengkap: https://topas-nbio.readthedocs.io/en/latest/getting-started/Citations.html
