@@ -48,6 +48,8 @@ Molekul yang dicatat: •OH, e⁻aq, H₃O⁺, H₂O₂, H•, H₂, OH⁻, O₂
 | jumlahpulsa | Flash | 100 MeV | 10 | 100 Hz | 10 µs | 1,2×10⁵ µs |
 | jumlahpulsa | konvensional | 30 MeV* | 1000 | 100 Hz | 10 µs | 0,09 s |
 
+terjadi kesalahan energi yang digunakan untuk parameter konvensional. sehingga untuk output dalam analisis menggunakan energi 30 MeV.
+
 \* Nilai dari `run_seed_N.txt` (input yang benar-benar dijalankan). File dasar
 `lebarpulsa_10ms_1seed.txt` di folder konvensional masih tertulis 100 MeV.
 
