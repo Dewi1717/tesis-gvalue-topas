@@ -98,7 +98,7 @@ File ASCII dengan 4 kolom (lihat `.header`):
 ## Penulis
 
 <!-- Lengkapi: nama, program studi, universitas, pembimbing, tahun -->
-Dewi Riskiana – Tesis, [Program Studi], [Universitas], [Tahun].
+Dewi Riskiana – Institut Teknologi Bandung.
 
 ## Lisensi
 
@@ -127,6 +127,7 @@ bukan sebagai dukungan dari TOPAS-nBio Collaboration.
 Jika memakai repositori ini, mohon sitasi tesis ini dan referensi TOPAS-nBio berikut.
 TOPAS-nBio meminta referensi utama mereka disitasi untuk semua karya yang memakai TOPAS-nBio.
 
+- Riskiana, D. N., Azimah, A. F., Suwandi, G. R. F., & Haryanto, F. (2026, June 11). Modeling beam timing effects in FLASH proton therapy with TOPAS‑nBio Monte Carlo radiochemistry. 24th Southeast Asian Congress on Medical Physics 2026 and 7th Philippine Conference on Medical Physics, Manila Hotel, Manila, Philippines. Society of Medical Physicists in the Republic of the Philippines, Inc. https://doi.org/10.5281/zenodo.20084608.
 - **TOPAS-nBio (wajib):** Schuemann J. et al. TOPAS-nBio: An Extension to the TOPAS
   Simulation Toolkit for Cellular and Sub-cellular Radiobiology. *Radiation Research*
   191(2), 125 (2019). https://doi.org/10.1667/RR15226.1
